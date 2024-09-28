@@ -10,8 +10,8 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #force user to join your backup channel leave 0 if you don't need.
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001996959044"))
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", ""))
 
 if FORCE_SUB_CHANNEL > FORCE_SUB_CHANNEL2:
     temp = FORCE_SUB_CHANNEL2 
@@ -35,7 +35,7 @@ DB_NAME = os.environ.get("DB_NAME", "hostingupfilterbot")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "60"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link. 💾")
 OWNER_TAG = os.environ.get("OWNER_TAG", "5709370072")
-TIME = int(os.environ.get("TIME", "1060"))
+TIME = int(os.environ.get("TIME", "1230"))
 
 
 #Shortner (token system) 
