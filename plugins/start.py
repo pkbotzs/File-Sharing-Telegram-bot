@@ -220,9 +220,10 @@ async def start_command(client: Client, message: Message):
                 [
                     InlineKeyboardButton("〄 About Me", callback_data="about"),
                     InlineKeyboardButton("🔒 Close", callback_data="close")
-                ],[
-                    InlineKeyboardButton('⍟ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⌬', url='https://t.me/+KqaSoWcRheZmODQ1')
-                  ]
+                ],
+                [
+                    InlineKeyboardButton("⍟ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⌬", url='https://t.me/+KqaSoWcRheZmODQ1')
+                ]
             ]
         )
         await message.reply_text(
