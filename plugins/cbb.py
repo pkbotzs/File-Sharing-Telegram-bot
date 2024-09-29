@@ -9,12 +9,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Language : <code>Python3</code></b> 🐍\n<b>○ Version : v1 🫏</b>\n<b>○ Developer : <code>@savoryrabbit</code> 😼</b>",
+            text = f"<b>○ Language : <code>Pʏᴛʜᴏɴ𝟹</code></b> 🐍\n<b>○ Vᴇʀsɪᴏɴ : v1 🫏</b>\n<b>○ Dᴇᴠᴇʟᴏᴘᴇʀ : <code>@PKlinkzz_admin_bot</code> 😼</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 Cʟᴏsᴇ", callback_data = "close")
                     ]
                 ]
             )
@@ -27,15 +27,15 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             pass
     elif data == "buy_prem":
         await query.message.edit_text(
-            text=f"👋 {query.from_user.username}\n\n🎖️ Available Plans :\n\n● {PRICE1} rs For 7 Days Prime Membership\n\n● {PRICE2} rs For 1 Month Prime Membership\n\n● {PRICE3} rs For 3 Months Prime Membership\n\n● {PRICE4} rs For 6 Months Prime Membership\n\n● {PRICE5} rs For 1 Year Prime Membership\n\n\n💵 UPI ID -  <code>{UPI_ID}</code>\n\n\n📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n♻️ If payment is not getting sent on above given QR code then inform admin, he will give you new QR code\n\n\n‼️ Must Send Screenshot after payment",
+            text=f"👋 {query.from_user.username}\n\n🎖️ ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs :\n\n● {PRICE1} ʀs ғᴏʀ 𝟽 ᴅᴀʏs ᴘʀɪᴍᴇ ᴍᴇᴍʙᴇʀsʜɪᴘ\n\n● {PRICE2} ʀs ғᴏʀ 𝟷 ᴍᴏɴᴛʜ ᴘʀɪᴍᴇ ᴍᴇᴍʙᴇʀsʜɪᴘ\n\n● {PRICE3} ʀs ғᴏʀ 3 ᴍᴏɴᴛʜ ᴘʀɪᴍᴇ ᴍᴇᴍʙᴇʀsʜɪᴘ\n\n● {PRICE4} ʀs ғᴏʀ 6 ᴍᴏɴᴛʜ ᴘʀɪᴍᴇ ᴍᴇᴍʙᴇʀsʜɪᴘ\n\n● {PRICE5} ʀs ғᴏʀ 𝟷 ʏᴇᴀʀ ᴘʀɪᴍᴇ ᴍᴇᴍʙᴇʀsʜɪᴘ\n\n\n💵 UPI ID -  <code>{UPI_ID}</code>\n\n\n📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n♻️ ɪғ ᴘᴀʏᴍᴇɴᴛ ɪs ɴᴏᴛ ɢᴇᴛᴛɪɴɢ sᴇɴᴛ ᴏɴ ᴀʙᴏᴠᴇ ɢɪᴠᴇɴ ǫʀ ᴄᴏᴅᴇ ᴛʜᴇɴ ɪɴғᴏʀᴍ ᴀᴅᴍɪɴ, ʜᴇ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ɴᴇᴡ ǫʀ ᴄᴏᴅᴇ\n\n\n ✔ Nᴏᴛᴇ:  ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ",
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup(
                 [   
                     [
-                        InlineKeyboardButton("Send Payment Screenshot(ADMIN) 📸", url=(SCREENSHOT_URL))
+                        InlineKeyboardButton("Sᴇɴᴅ Pᴀʏᴍᴇɴᴛ Sʀᴇᴇɴsʜᴏᴛ(ADMIN) 📸", url=(SCREENSHOT_URL))
                     ],
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 ᴄʟᴏsᴇ", callback_data = "close")
                     ]
                 ]
             )
