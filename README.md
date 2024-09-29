@@ -70,19 +70,20 @@ python3 main.py
 ````
 
 ## Basic Commands
-- `/start` - Check whether bot is online 🟢
-- `/ping` - For checking ping of the bot 🔥
-- `/ch2l` - For converting code to link for respected bot
-- `/stats` - Uptime of the bot (admin only) ⏱️
-- `/users` - Total users active (admin only) 👥
-- `/batch` - To generate the link in batch (admin only) 🔗
-- `/genlink` - To generate link (admin only) 🔀
-- `/auth` - For using the bot which will send the ID to the owner's DM. The owner will add the admin to config file and restart the bot. 
-- `/add_prem` - adding user to premium services(admins only) ⚡ UNDER CONSTRUCTION
-- `/restart` - For restarting the bot(admins only)
-- `/admins` - list all admins(admins only)
-- `/add_admin` - For adding new admins(owner only) restart recommended ⚡ UNDER CONSTRUCTION
-- `/del_admin` - For removing admins(owner only) restart recommended ⚡ UNDER CONSTRUCTION
+- `/start` - ᴄʜᴇᴄᴋ ᴡʜᴇᴛʜᴇʀ ʙᴏᴛ ɪs ᴏɴʟɪɴᴇ 🟢
+- `/ping` - ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ 🔥
+- `/ch2l` - ғᴏʀ ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴄᴏᴅᴇ ᴛᴏ ʟɪɴᴋ ғᴏʀ ʀᴇsᴘᴇᴄᴛᴇᴅ ʙᴏᴛ
+- `/stats` - ᴜᴘᴛɪᴍᴇ ᴏғ ᴛʜᴇ ʙᴏᴛ (ᴀᴅᴍɪɴ ᴏɴʟʏ) ⏱️
+- `/users` - ᴛᴏᴛᴀʟ ᴜsᴇʀs ᴀᴄᴛɪᴠᴇ (ᴀᴅᴍɪɴ ᴏɴʟʏ) 👥
+- `/batch` - ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴛʜᴇ ʟɪɴᴋ ɪɴ ʙᴀᴛᴄʜ (ᴀᴅᴍɪɴ ᴏɴʟʏ) 🔗
+- `/genlink` - ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ʟɪɴᴋ (ᴀᴅᴍɪɴ ᴏɴʟʏ) 🔀
+- `/broadcast` - ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ɪᴛ ᴛᴏ ᴀʟʟ ᴜsᴇʀs (ᴏᴡɴᴇʀ ᴏɴʟʏ).
+- `/auth` - ғᴏʀ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ ᴡʜɪᴄʜ ᴡɪʟʟ sᴇɴᴅ ᴛʜᴇ ɪᴅ ᴛᴏ ᴛʜᴇ ᴏᴡɴᴇʀ's ᴅᴍ. ᴛʜᴇ ᴏᴡɴᴇʀ ᴡɪʟʟ ᴀᴅᴅ ᴛʜᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴄᴏɴғɪɢ ғɪʟᴇ ᴀɴᴅ ʀᴇsᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ. 
+- `/add_prem` - ᴀᴅᴅɪɴɢ ᴜsᴇʀ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇs (ᴀᴅᴍɪɴs ᴏɴʟʏ) ⚡ ᴜɴᴅᴇʀ ᴄᴏɴsᴛʀᴜᴄᴛɪᴏɴ
+- `/restart` - ғᴏʀ ʀᴇsᴛᴀʀᴛɪɴɢ ᴛʜᴇ ʙᴏᴛ (ᴀᴅᴍɪɴs ᴏɴʟʏ)
+- `/admins` - ʟɪsᴛ ᴀʟʟ ᴀᴅᴍɪɴs (ᴀᴅᴍɪɴs ᴏɴʟʏ)
+- `/add_admin` - ғᴏʀ ᴀᴅᴅɪɴɢ ɴᴇᴡ ᴀᴅᴍɪɴs (ᴏᴡɴᴇʀ ᴏɴʟʏ) ʀᴇsᴛᴀʀᴛ ʀᴇᴄᴏᴍᴍᴇɴᴅᴇᴅ ⚡ ᴜɴᴅᴇʀ ᴄᴏɴsᴛʀᴜᴄᴛɪᴏɴ
+- `/del_admin` - ғᴏʀ ʀᴇᴍᴏᴠɪɴɢ ᴀᴅᴍɪɴs (ᴏᴡɴᴇʀ ᴏɴʟʏ) ʀᴇsᴛᴀʀᴛ ʀᴇᴄᴏᴍᴍᴇɴᴅᴇᴅ ⚡ ᴜɴᴅᴇʀ ᴄᴏɴsᴛʀᴜᴄᴛɪᴏɴ
 
 ## Secret Commands
 - `/broadcast` - Reply to any message to broadcast it to all users(owner only).
