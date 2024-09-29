@@ -35,11 +35,11 @@ async def start_command(client: Client, message: Message):
             if "verify_" in message.text:
                 _, token = message.text.split("_", 1)
                 if verify_status['verify_token'] != token:
-                    return await message.reply("Your token is invalid or Expired ⌛. Try again by clicking /start")
+                    return await message.reply("ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ɪɴᴠᴀʟɪᴅ ᴏʀ ᴇxᴘɪʀᴇᴅ ⌛. ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ /start")
                 await update_verify_status(id, is_verified=True, verified_time=time.time())
                 if verify_status["link"] == "":
                     reply_markup = None
-                await message.reply(f"Your token successfully verified and valid for: {get_exp_time(VERIFY_EXPIRE)} ⏳", reply_markup=reply_markup, protect_content=False, quote=True)
+                await message.reply(f"ʏᴏᴜʀ ᴛᴏᴋᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ᴀɴᴅ ᴠᴀʟɪᴅ ғᴏʀ: {get_exp_time(VERIFY_EXPIRE)} ⏳", reply_markup=reply_markup, protect_content=False, quote=True)
     if len(message.text) > 7:
         for i in range(1):
             if USE_SHORTLINK and (not U_S_E_P):
@@ -84,11 +84,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[3]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Please wait... 🫷")
+                temp_msg = await message.reply("ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... 🫷")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Something went wrong..! 🥲")
+                    await message.reply_text("sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ..! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -110,14 +110,14 @@ async def start_command(client: Client, message: Message):
                         pass
                 if (SECONDS == 0):
                     return
-                notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                notification_msg = await message.reply(f"<b>🌺 <u>ɴᴏᴛɪᴄᴇ</u> 🌺</b>\n\n<b>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ  ᴅᴇʟᴇᴛᴇᴅ ɪɴ {get_exp_time(SECONDS)}. ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ.</b>")
                 await asyncio.sleep(SECONDS)    
                 for snt_msg in snt_msgs:    
                     try:    
                         await snt_msg.delete()  
                     except: 
                         pass    
-                await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                await notification_msg.edit("<b>ʏᴏᴜʀ ғɪʟᴇ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ! 😼</b>")  
                 return
             if (U_S_E_P):
                 if verify_status['is_verified'] and VERIFY_EXPIRE < (time.time() - verify_status['verified_time']):
@@ -173,14 +173,14 @@ async def start_command(client: Client, message: Message):
                 if snt_msgs:
                     if (SECONDS == 0):
                         return
-                    notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                    notification_msg = await message.reply(f"<b>🌺 <u>ɴᴏᴛɪᴄᴇ</u> 🌺</b>\n\n<b>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ  ᴅᴇʟᴇᴛᴇᴅ ɪɴ {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
                     await asyncio.sleep(SECONDS)    
                     for snt_msg in snt_msgs:    
                         try:    
                             await snt_msg.delete()  
-                        except: 
+                        except: ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ
                             pass    
-                    await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                    await notification_msg.edit("<b>ʏᴏᴜʀ ғɪʟᴇ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ! 😼</b>")  
                     return
             except:
                     newbase64_string = await encode(f"sav-ory-{_string}")
@@ -194,14 +194,14 @@ async def start_command(client: Client, message: Message):
                     link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'{newLink}')
                     if USE_PAYMENT:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link),
-                        InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                        [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                        [InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ 👆", url=link),
+                        InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ 👆', url=TUT_VID)],
+                        [InlineKeyboardButton("💳ᴏʀ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ💳", callback_data="buy_prem")]
                         ]
                     else:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link)],
-                        [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                        [InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ 👆", url=link)],
+                        [InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ 👆', url=TUT_VID)]
                         ]
                     await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                     return
@@ -218,9 +218,11 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data="about"),
+                    InlineKeyboardButton("〄 About Me", callback_data="about"),
                     InlineKeyboardButton("🔒 Close", callback_data="close")
-                ]
+                ],[
+                    InlineKeyboardButton('⍟ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ⌬', url='https://t.me/+KqaSoWcRheZmODQ1')
+                  ]
             ]
         )
         await message.reply_text(
@@ -246,16 +248,16 @@ async def start_command(client: Client, message: Message):
             link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'https://telegram.dog/{client.username}?start=verify_{token}')
             if USE_PAYMENT:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link),
-                InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
-                [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                [InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ 👆", url=link),
+                InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ 👆', url=TUT_VID)],
+                [InlineKeyboardButton("💳ᴏʀ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ💳", callback_data="buy_prem")]
                 ]
             else:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link)],
-                [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                [InlineKeyboardButton("ᴄʟɪᴄᴋ ʜᴇʀᴇ 👆", url=link)],
+                [InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs ʟɪɴᴋ 👆', url=TUT_VID)]
                 ]
-            await message.reply(f"Your Ads token is expired, refresh your token and try again. \n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+            await message.reply(f"ʏᴏᴜʀ ᴀᴅs ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ, ʀᴇғʀᴇsʜ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ. \n\nᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ: {get_exp_time(VERIFY_EXPIRE)}\n\nᴡʜᴀᴛ ɪs ᴛʜᴇ ᴛᴏᴋᴇɴ❓\n\nᴛʜɪs ɪs ᴀɴ ᴀᴅs ᴛᴏᴋᴇɴ. ɪғ ʏᴏᴜ ᴘᴀss 𝟷 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ {get_exp_time(VERIFY_EXPIRE)} ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
             return
     return
 
@@ -263,9 +265,9 @@ async def start_command(client: Client, message: Message):
     
 #=====================================================================================#
 
-WAIT_MSG = """<b>Processing ...</b>"""
+WAIT_MSG = """<b>Pʀᴏᴄᴇssɪɴɢ ᴡᴀɪᴛ...</b>"""
 
-REPLY_ERROR = """<code>Use this command as a replay to any telegram message without any spaces.</code>"""
+REPLY_ERROR = """<code>ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴀs ᴀ ʀᴇᴘʟᴀʏ ᴛᴏ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇssᴀɢᴇ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ sᴘᴀᴄᴇs.</code>"""
 
 #=====================================================================================#
 
@@ -275,10 +277,10 @@ async def not_joined(client: Client, message: Message):
         buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇",
                 url=client.invitelink),
             InlineKeyboardButton(
-                "Join Channel 👆",
+                "✇ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ✇ 👆",
                 url=client.invitelink2),
         ]
     ]
@@ -286,7 +288,7 @@ async def not_joined(client: Client, message: Message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    "Join Channel 👆",
+                    "✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇",
                     url=client.invitelink)
             ]
         ]
@@ -294,7 +296,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text='Try Again 🥺',
+                    text='↻ Tʀʏ Aɢᴀɪɴ',
                     url=f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -319,7 +321,7 @@ async def not_joined(client: Client, message: Message):
 @Bot.on_message(filters.command('ch2l') & filters.private)
 async def gen_link_encoded(client: Bot, message: Message):
     try:
-        hash = await client.ask(text="Enter the code here... \n /cancel to cancel the operation",chat_id = message.from_user.id, timeout=60)
+        hash = await client.ask(text="ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ... \n /cancel ᴛᴏ ᴄᴀɴᴄᴇʟ ᴛʜᴇ ᴏᴘᴇʀᴀᴛɪᴏɴ",chat_id = message.from_user.id, timeout=60)
     except Exception as e:
         print(e)
         await hash.reply(f"😔 some error occurred {e}")
@@ -329,7 +331,7 @@ async def gen_link_encoded(client: Bot, message: Message):
         return
     link = f"https://t.me/{client.username}?start={hash.text}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🎉 Click Here ", url=link)]])
-    await hash.reply_text(f"<b>🧑‍💻 Here is your generated link", quote=True, reply_markup=reply_markup)
+    await hash.reply_text(f"<b>🧑‍💻 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ɢᴇɴᴇʀᴀᴛᴇᴅ ʟɪɴᴋ", quote=True, reply_markup=reply_markup)
     return
         
 
@@ -351,7 +353,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
 
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time ⌚</i>")
+        pls_wait = await message.reply("<i>ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴍᴇssᴀɢᴇ.. ᴛʜɪs ᴡɪʟʟ ᴛᴀᴋᴇ sᴏᴍᴇ ᴛɪᴍᴇ ⌚</i>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
@@ -371,13 +373,13 @@ async def send_text(client: Bot, message: Message):
                 pass
             total += 1
 
-        status = f"""<b><u>Broadcast Completed 🟢</u>
+        status = f"""<b><u>ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ🟢</u>
                 
-                Total Users: <code>{total}</code>
-                Successful: <code>{successful}</code>
-                Blocked Users: <code>{blocked}</code>
-                Deleted Accounts: <code>{deleted}</code>
-                Unsuccessful: <code>{unsuccessful}</code></b>"""
+                ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{total}</code>
+                sᴜᴄᴄᴇssғᴜʟʟ: <code>{successful}</code>
+                ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs: <code>{blocked}</code>
+                ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs: <code>{deleted}</code>
+                ᴜɴsᴜᴄᴄᴇssғᴜʟʟ: <code>{unsuccessful}</code></b>"""
 
         return await pls_wait.edit(status)
 
