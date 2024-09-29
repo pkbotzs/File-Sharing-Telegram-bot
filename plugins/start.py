@@ -173,12 +173,12 @@ async def start_command(client: Client, message: Message):
                 if snt_msgs:
                     if (SECONDS == 0):
                         return
-                    notification_msg = await message.reply(f"<b>🌺 <u>ɴᴏᴛɪᴄᴇ</u> 🌺</b>\n\n<b>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ  ᴅᴇʟᴇᴛᴇᴅ ɪɴ {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                    notification_msg = await message.reply(f"<b>🌺 <u>ɴᴏᴛɪᴄᴇ</u> 🌺</b>\n\n<b>ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ  ᴅᴇʟᴇᴛᴇᴅ ɪɴ {get_exp_time(SECONDS)}. ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ.</b>")
                     await asyncio.sleep(SECONDS)    
                     for snt_msg in snt_msgs:    
                         try:    
                             await snt_msg.delete()  
-                        except: ᴘʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs ᴅᴇʟᴇᴛᴇᴅ
+                        except: 
                             pass    
                     await notification_msg.edit("<b>ʏᴏᴜʀ ғɪʟᴇ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ! 😼</b>")  
                     return
