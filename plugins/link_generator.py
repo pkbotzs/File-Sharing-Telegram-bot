@@ -41,7 +41,7 @@ async def batch(client: Client, message: Message):
     link = f"https://t.me/{client.username}?start={base64_string}"
     shortened_link = await short_link(link)
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
-    await second_message.reply_text(f"<b>🧑‍💻 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : \n<code>{base64_string}</code></b>\n\n<b>🔗 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 :</b>\n{link}", quote=True, reply_markup=reply_markup)
+    await second_message.reply_text(f"<b>🧑‍💻 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : \n<code>{base64_string}</code></b>\n\n<b>🔗 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 :</b>\n{shortened_link}", quote=True, reply_markup=reply_markup)
 
 
 
@@ -64,4 +64,4 @@ async def link_generator(client: Client, message: Message):
     link = f"https://t.me/{client.username}?start={base64_string}"
     shortened_link = await short_link(link)
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
-    await channel_message.reply_text(f"<b>🧑‍💻 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : \n<code>{base64_string}</code></b>\n\n<b>🔗 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : </b>\n{link}", quote=True, reply_markup=reply_markup)
+    await channel_message.reply_text(f"<b>🧑‍💻 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : \n<code>{base64_string}</code></b>\n\n<b>🔗 Hᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ👍 : </b>\n{shortened_link}", quote=True, reply_markup=reply_markup)
