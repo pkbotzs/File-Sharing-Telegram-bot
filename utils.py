@@ -2,7 +2,7 @@ from shortzy import Shortzy
 
 # Configuration variables
 SHORTNER_MODE = True  # Set to True to enable link shortening
-SHORTNER_URL = "https://instantlinks.co"  # Base URL for the shortening service
+SHORTNER_URL = "instantlinks.co"  # Base URL for the shortening service
 SHORTNER_API = "6cd779493a7872c4933d83e41277455f8dea47f1"  # Your API key
 
 async def short_link(link):
