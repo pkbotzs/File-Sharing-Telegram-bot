@@ -2,8 +2,8 @@ from shortzy import Shortzy
 
 # Configuration variables
 SHORTNER_MODE = True  # Set to True to enable link shortening
-SHORTNER_URL = "https://modijiurl.com"  # Base URL for the shortening service
-SHORTNER_API = "6a0a4f826e12f701a433063ebbe730caa1c29c38"  # Your API key
+SHORTNER_URL = "https://instantlinks.co"  # Base URL for the shortening service
+SHORTNER_API = "6cd779493a7872c4933d83e41277455f8dea47f1"  # Your API key
 
 async def short_link(link):
     # If shortening is disabled, return the original link
