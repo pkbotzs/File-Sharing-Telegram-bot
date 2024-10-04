@@ -2,7 +2,7 @@ import asyncio
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait
-
+from utils import short_link
 from bot import Bot
 from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON, USER_REPLY_TEXT
 from helper_func import encode
@@ -24,10 +24,10 @@ async def channel_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
+    shortened_link = await short_link(link)
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={link}')]])
-
-    new_text = f"<b>🧑‍💻 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ : \n<code>{base64_string}</code></b>\n\n<b>🔗 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟɪɴᴋ 👇:</b>\n{link}"
+    new_text = f"<b>🧑‍💻 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ : \n<code>{base64_string}</code></b>\n\n<b>🔗 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟɪɴᴋ 👇:</b>\n{shortened_link}"
 
     # Check if the current message text is the same as the new text
     if reply_text.text != new_text:
@@ -52,7 +52,8 @@ async def new_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={link}')]])
+    shortened_link = await short_link(link)
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
     try:
         await message.edit_reply_markup(reply_markup)
     except FloodWait as e:
