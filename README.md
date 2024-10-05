@@ -44,10 +44,6 @@ genlink - to generate link [admin only]🔀
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
 <a href="https://youtu.be/LCrkRTMkmzE">
   <img src="https://img.shields.io/badge/How%20to-Deploy-red?logo=youtube" width="147">
-</a><br>
-**Check This Tutorial Video on YouTube for any Help**<br>
-**Thanks to [Erich](https://t.me/ErichDaniken) and his [InFoTel](https://t.me/InFoTel_Group) for this Video**
-
 #### Deploy on Railway
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/1jKLr4)
 
@@ -56,7 +52,7 @@ genlink - to generate link [admin only]🔀
 The fastest way to deploy the application is to click the **Deploy to Koyeb** button below.
 
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Sachinanand99/File-Sharing-Telegram-bot&branch=main&name=FileStoreBot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/pkbotzs/File-Sharing-Telegram-bot&branch=main&name=FileStoreBot)
 
 
 #### Deploy in your VPS
@@ -167,6 +163,7 @@ Report Bugs, Give Feature Requests at https://github.com/Sachinanand99/File-Shar
 ### Credits
 
 - Thanks To Dan For His Awsome [Libary](https://github.com/pyrogram/pyrogram)
+- Thanks To Sachinanand99 Sachin Anand 
 - Thanks to everyone who is on this awesome opensource project.
 
 ##
