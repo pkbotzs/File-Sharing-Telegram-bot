@@ -31,7 +31,7 @@ async def channel_post(client: Client, message: Message):
     
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
 
-    await reply_text.edit(f"<b>Here is your link</b>\n\n{link}",
+    await reply_text.edit(f"<b>Here is your link</b>\n\n{link}"),
     # Check if the current message text is the same as the new text
     if reply_text.text != new_text:
         await reply_text.edit(new_text, reply_markup=reply_markup, disable_web_page_preview=True)
