@@ -28,7 +28,10 @@ async def channel_post(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
 
     new_text = f"<b>🧑‍💻 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴄᴏᴅᴇ : \n<code>{base64_string}</code></b>\n\n<b>🔗 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟɪɴᴋ 👇:</b>\n{shortened_link}"
+    
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
 
+    await reply_text.edit(f"<b>Here is your link</b>\n\n{link}",
     # Check if the current message text is the same as the new text
     if reply_text.text != new_text:
         await reply_text.edit(new_text, reply_markup=reply_markup, disable_web_page_preview=True)
@@ -54,6 +57,7 @@ async def new_post(client: Client, message: Message):
     link = f"https://t.me/{client.username}?start={base64_string}"
     shortened_link = await short_link(link)
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Sʜᴀʀᴇ ᴜʀʟ", url=f'https://telegram.me/share/url?url={shortened_link}')]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
     try:
         await message.edit_reply_markup(reply_markup)
     except FloodWait as e:
