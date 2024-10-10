@@ -53,7 +53,7 @@ async def decode(base64_string):
     base64_string = base64_string.strip("=") 
     base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("utf-8")
     string_bytes = base64.urlsafe_b64decode(base64_bytes) 
-    string = string_bytes.decode("utf-8, errors="ignore"")
+    string = string_bytes.decode("utf-8", errors="ignore")
     return string
 
 async def get_messages(client, message_ids):
